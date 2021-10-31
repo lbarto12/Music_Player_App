@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#363636"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#292929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:iconifiedByDefault="false"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lowerPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+
+
+    <SeekBar
+        android:id="@+id/timeStampBar"
+        android:layout_width="408dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:thumbTint="#00ffffff"
+        android:progressTint="#1DB954"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lowerPanel"
+        android:layout_width="406dp"
+        android:layout_height="61dp"
+        android:background="#292929"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/hotbarCover"
+            android:layout_width="48dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/image" />
+
+        <Button
+            android:id="@+id/currentSong"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00ffffff"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="No Song Playing"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/timeStamp"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <ImageButton
+            android:id="@+id/playPause"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/not_play"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
