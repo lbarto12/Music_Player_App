@@ -51,8 +51,7 @@ class SongService : Service() {
 
 
 
-    // FIXME: Soooo... this is called from a bound service as well as a started one apparently...
-    //  Services got me fucked up
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         createNotificationChannel()
